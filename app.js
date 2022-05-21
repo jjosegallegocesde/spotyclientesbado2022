@@ -1,8 +1,6 @@
 import {consumirCanciones} from './servicioTopCanciones.js'
-import {generarToken} from './servicioGenerarToken.js'
-
-let token=await generarToken()
-console.log(token)
+import {pintarCanciones} from './pintarCanciones.js'
 
 let canciones=await consumirCanciones()
-console.log(canciones)
+
+pintarCanciones(canciones)

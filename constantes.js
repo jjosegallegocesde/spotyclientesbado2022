@@ -1,3 +1,6 @@
+import { generarToken } from "./servicioGenerarToken.js"
+
+
 //1. PA ONDE VOY? (CONOCER URI DEL SERVICIO O API A CONSUMIR)
 export const URI_TOP_CANCIONES='https://api.spotify.com/v1/artists/4jirsf9rymh8ajWTRRnF5g/top-tracks?market=US'
 
@@ -20,7 +23,9 @@ export const PETICION_GENERAR_TOKEN={
 
 
 //2. ARMO LA PETICION (que vas a hacer ome?)
-const TOKEN='Bearer BQCs_bTTn-jrtqP1WiZp4TunYSwZGFavsa79EDDiVqyw8Sjw2dDLjDieQgMiq5mXGrJhwEXqJ7ypVMZd9bWNg7zmI6LjRObi90VNIaDyG6L_ActuaIjqk8A34XpVpIa3sQzNinDQuglFgFtHOVo'
+//llamoa la funcion que trae el token
+let token= await generarToken() 
+const TOKEN=token.token_type+" "+token.access_token;
 
 export const PETICION_TOP_CANCIONES={
     method:"GET",

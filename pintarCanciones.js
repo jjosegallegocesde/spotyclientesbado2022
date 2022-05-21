@@ -1,25 +1,5 @@
-//PASOS PARA CONSUMIR UN API
-
-
-
-
-
-
-//3. ARRANCA PS OME PAL SERVIDOR (CONSUMIR EL API)(el que va al servidor)
-fetch(URI,PETICION)
-.then(function(respuesta){
-    return(respuesta.json()) //garantizo formato JSON
-})
-.then(function(respuesta){
-    pintarCanciones(respuesta) //hago lo que quiera con la respuesta
-})
-.catch(function(respuesta){
-    console.log(respuesta) //muestro el fallo si no se pudo consumir el api
-})
-
-
 //FUNCION PARA PINTAR LA INFO QUE LLEGA DEL API
-function pintarCanciones(canciones){
+export function pintarCanciones(canciones){
    
     let fila=document.getElementById("fila")
 
