@@ -1,14 +1,9 @@
 //PASOS PARA CONSUMIR UN API
 
-//1. PA ONDE VOY? (CONOCER URI DEL SERVICIO O API A CONSUMIR)
-const URI='https://api.spotify.com/v1/artists/4jirsf9rymh8ajWTRRnF5g/top-tracks?market=US'
 
-//2. ARMO LA PETICION (que vas a hacer ome?)
-const TOKEN='Bearer BQBdWUcWt_X9iV85ZWIqQNzs6AhCz5ZynwGQp1dbeaR6zIUYbtzCKxXJH7nStqOC9o9OR0wISpAid4YnwASyYJCaD3yU_SGAC8csh7J1h9Wt6El-7aJpudP0nn0QwnjMpZ17asXgHW81bntp4tc'
-const PETICION={
-    method:"GET",
-    headers:{Authorization:TOKEN}
-}
+
+
+
 
 //3. ARRANCA PS OME PAL SERVIDOR (CONSUMIR EL API)(el que va al servidor)
 fetch(URI,PETICION)
