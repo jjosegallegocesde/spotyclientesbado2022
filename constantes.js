@@ -2,7 +2,7 @@
 export const URI_TOP_CANCIONES='https://api.spotify.com/v1/artists/4jirsf9rymh8ajWTRRnF5g/top-tracks?market=US'
 
 //1.1 uri del servicio que genera tokens
-const URI_GENERAR_TOKEN='https://accounts.spotify.com/api/token'
+export const URI_GENERAR_TOKEN='https://accounts.spotify.com/api/token'
 
 //NOTA: DATOS DE ENVIO (POST)
 const DATO1="client_id=ca73dd69551e488aa81e484470f5bc46"
@@ -11,9 +11,10 @@ const DATO3="grant_type=client_credentials"
 
 const DATOS_PETICION=`${DATO1}&${DATO2}&${DATO3}`
 
-const PETICION_GENERAR_TOKEN={
+export const PETICION_GENERAR_TOKEN={
     method:"POST",
-    headers:{"Content-type"}
+    headers:{"Content-type":"application/x-www-form-urlencoded"},
+    body:DATOS_PETICION
 }
 
 
